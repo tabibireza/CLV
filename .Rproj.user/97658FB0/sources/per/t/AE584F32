@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564978216143.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1047952038",
+    "id" : "AE584F32",
+    "lastKnownWriteTime" : 1564992095,
+    "last_content_update" : 1564992095696,
+    "path" : "C:/rezawork/study/r-studio/projects/CLV/CLV-script.R",
+    "project_path" : "CLV-script.R",
+    "properties" : {
+        "cursorPosition" : "12,34",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
