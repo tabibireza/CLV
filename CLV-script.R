@@ -1,5 +1,5 @@
 # customer lifetime value 
-# Matrix Factorization for Recommender Systems
+# Matrix Factorization for Recommender(RECO) Systems
 # to predict the rating the movies in the test dataset
 getwd ()
 data_train <- read.csv("train.csv")
@@ -16,6 +16,7 @@ set.seed(145)
 # 100 iterations
 # involving 5 fold cross validation.
 r= Reco()
+attributes(r)
 opts<-r$tune(data_memory(data_train$User,data_train$Movie, 
                          rating=data_train$Rating, 
                          index1=TRUE),
@@ -24,6 +25,7 @@ opts<-r$tune(data_memory(data_train$User,data_train$Movie,
                        niter=200,
                        nfold=5,
                        verbose=FALSE))
+attributes(opts)
 opts$min
 
 #  the model on the training data. We restrict ourself to 200
@@ -34,6 +36,7 @@ res <- r$output(out_memory(), out_memory())
 
 #  predict the ratings in the test data using the predict command
 predMem=r$predict(data_memory(data_test$User,data_test$Movie, rating=NULL, index1=TRUE),out_memory())
+predMem
 
 # compare the predictive accuracy of several methods by comparing their rmse values
 rmse=sqrt(mean((predMem-data_test$Rating)^2))
